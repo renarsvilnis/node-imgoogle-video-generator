@@ -1,0 +1,21 @@
+{
+  "folders":
+  [
+    {
+      "path": ".",
+      "folder_exclude_patterns": [
+        "node_modules",
+        "es5"
+      ]
+    }
+  ],
+  "settings": {
+    "todoreview": {
+      "exclude_folders": [
+        "*.git*",
+        "*node_modules*",
+        "*es5*"
+      ]
+    }
+  }
+}
