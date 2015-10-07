@@ -1,5 +1,5 @@
 
-Programmatically generated video that uses visually chained images from the I'm Google project (dinakelberman.tumblr.com/). All the hard work of finding the images goes to the project author [Dina Kelberman](http://dinakelberman.com/).
+Project that generates a video that uses visually chained images from the [I'm Google project](http://dinakelberman.tumblr.com/). All the hard work of finding the images goes to the project author [Dina Kelberman](http://dinakelberman.com/).
 
 Compiled video: https://vimeo.com/141656542
 
