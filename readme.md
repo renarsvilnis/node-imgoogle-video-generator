@@ -29,3 +29,5 @@ ffmpeg -framerate 10 -pattern_type glob -i 'images/original/*.jpg' -c:v libx264 
 
 ## TODO
 - For the `ffmpeg` compile add pattern for png and gif images.
+- Generate a `1280x720px` thumbnail from all images
+- Add sound to video
