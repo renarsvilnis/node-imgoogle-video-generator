@@ -1,24 +1,25 @@
 
+Programmatically generated video that uses visually chained images from the I'm Google project (dinakelberman.tumblr.com/). All the hard work of finding the images goes to the project author [Dina Kelberman](http://dinakelberman.com/).
 
-
-
-Video generator that uses visualy chained Google image search results from [I'm Google project](http://dinakelberman.tumblr.com/). All the hard work goes to the thumblr owner Dina Kelberman.
-
-Video generated using node.js for fetching the images and ffmpeg for compiling the video from images.
+Compiled video: https://vimeo.com/141656542
 
 ## Requirements
 - [Node.js](https://nodejs.org/en/)
-- [ffmpeg](https://www.ffmpeg.org/) - can be installed on OSX by `brew install ffmpeg`
+- [ffmpeg](https://www.ffmpeg.org/)
 
-## Developing
+## Usage
 ```bash
-# install dependencies
+# install necessary dependencies
 npm install
 
 # transpile code form es6 to es5
 npm run build
 
-# (option) run nodemon build instance that reload on file change
+# (option) Run nodemon build instance that reload on file change
+# Note: Only use when developing
+npm run start-watch
+
+# Fetch all images
 npm run start
 
 # Compile to video
@@ -26,3 +27,5 @@ npm run start
 ffmpeg -framerate 10 -pattern_type glob -i 'images/original/*.jpg' -c:v libx264 -pix_fmt yuv420p out.mp4
 ```
 
+## TODO
+- For the `ffmpeg` compile add pattern for png and gif images.
