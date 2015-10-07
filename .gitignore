@@ -99,3 +99,9 @@ bower_components
 .bower-cache
 .bower-registry
 .bower-tmp
+
+
+### CUSTOM ###
+images
+out.mp4
+es5

@@ -18,7 +18,7 @@ var PAGE_RANGE = {
 };
 
 exports.PAGE_RANGE = PAGE_RANGE;
-var IMAGE_DIR = _path2['default'].join(__dirname, 'images');
+var IMAGE_DIR = _path2['default'].join(__dirname, '..', 'images');
 exports.IMAGE_DIR = IMAGE_DIR;
 var IMAGE_DIR_ORIGINAL = _path2['default'].join(IMAGE_DIR, 'original');
 exports.IMAGE_DIR_ORIGINAL = IMAGE_DIR_ORIGINAL;

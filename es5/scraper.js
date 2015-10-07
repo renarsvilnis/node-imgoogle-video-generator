@@ -18,14 +18,10 @@ var _request = require('request');
 
 var _request2 = _interopRequireDefault(_request);
 
-var _async = require('async');
-
-var _async2 = _interopRequireDefault(_async);
-
 var _constants = require('./constants');
 
 var createPageUrl = function createPageUrl(id) {
-  return _url2['default'].resolve(_constants.IMAGE_URL, "" + id);
+  return _url2['default'].resolve(_constants.IMAGE_URL, String(id));
 };
 
 exports.createPageUrl = createPageUrl;
@@ -37,8 +33,7 @@ var getPageHtml = function getPageHtml(url) {
       if (!err && res.statusCode === 200) {
         resolve(html);
       } else {
-        // TODO: error
-        reject();
+        reject(err);
       }
     });
   });
@@ -62,30 +57,9 @@ var getImageListFromHtml = function getImageListFromHtml(html) {
 };
 
 exports.getImageListFromHtml = getImageListFromHtml;
-var downloadImages = function downloadImages(images) {
-  new Promise(function (resolve, reject) {
-    if (!images || !Array.isArray(images)) {
-      // TODO: error
-      reject('Invalid parameter');
-    } else {
-      // TODO: use each to get index
-      _async2['default'].parallel(images, downloadImage, function (err, files) {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(err, files);
-        }
-      });
-    }
-  });
-};
 
-exports.downloadImages = downloadImages;
-var downloadImage = function downloadImage(image) {
-  console.log(image);
-  return new Promise(function (resolve, reject) {
-    resolve(image);
-  });
+exports['default'] = function (pageId) {
+  var url = createPageUrl(pageId);
+  return getPageHtml(url).then(getImageListFromHtml);
 };
-exports.downloadImage = downloadImage;
 //# sourceMappingURL=scraper.js.map
